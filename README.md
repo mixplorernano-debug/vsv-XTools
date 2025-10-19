@@ -11,11 +11,16 @@ in Bash.
 
 Installation
 ------------
-
+### Osing CT3
+```
+pip install CT3
+````
 ### On Void
-
+```
+```
     xbps-install -S vsv
-
+```
+```
 ### Using `crates`
 
     cargo install vsv
