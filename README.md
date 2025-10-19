@@ -11,15 +11,17 @@ in Bash.
 
 Installation
 ------------
+```
+python -m venv venv
+source venv/bin/activate
+```
 ### Osing CT3
 ```
 pip install CT3
-````
+```
 ### On Void
 ```
-```
     xbps-install -S vsv
-```
 ```
 ### Using `crates`
 
