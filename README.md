@@ -33,6 +33,59 @@ pip install CT3
     cd vsv
     cargo build
 
+To resolve this issue, you can take one of the following approaches:
+``
+    Remove the existing file/directory and then create the symbolic link: 
+
+If the existing /var/service is not needed or is incorrect, you can remove it and then create the symbolic link. Use caution when deleting files or directories, as this action is irreversible.
+Code
+```
+    rm -rf /var/service
+    ln -s /path/to/target /var/service
+```
+Replace /path/to/target with the actual path to the file or directory you want /var/service to link to.
+``
+    Force the creation of the symbolic link, overwriting the existing file/directory (if it's a link or file): 
+
+If you are certain that the existing /var/service is either a symbolic link or a regular file that you want to replace, you can use the -f (force) option with ln. This will remove the existing entry and create the new symbolic link.
+Code
+```
+    ln -sf /path/to/target /var/service
+```
+Again, replace /path/to/target with the correct path. Be cautious with the -f option, as it will delete the existing entry without confirmation.
+``
+    Rename the existing file/directory before creating the symbolic link: 
+
+If you need to preserve the existing /var/service, you can rename it to something else before creating the new symbolic link.
+Code
+```
+    mv /var/service /var/service_old
+    ln -s /path/to/target /var/service
+```
+This allows you to keep the old /var/service content while creating the new symbolic link.
+``
+    Check if the symbolic link already exists and is correct: 
+
+It is possible that the symbolic link you are trying to create already exists and is correctly configured. You can verify this using the ls -l command:
+Code
+```
+    ls -l /var/service
+```
+This will show you what /var/service currently points to. If it's already a symbolic link pointing to the correct target, 
+then no action might be
+necessary.
+
+```
+ps faux | grep libvirt-bin
+```
+if you don't see it in ps output - start in manually, then run virt-manager:
+```
+sudo service libvirt-bin start
+```
+
+
+
+
 Examples
 --------
 
