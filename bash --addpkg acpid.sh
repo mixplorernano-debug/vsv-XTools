@@ -1,0 +1,7 @@
+sudo vmbuilder kvm ubuntu --arch i386 --ip 192.168.0.100 --part vmbuilder.partition --user anton --name anton 
+--pass default --tmpfs - --firstboot boot.sh --firstlogin login.sh --mirror http://mirroraddress:9999/ubuntu 
+--suite intrepid --flavour virtual --addpkg openssh-server --addpkg apache2 
+--addpkg apache2-mpm-prefork --addpkg apache2-utils --addpkg apache2.2-common --addpkg dbconfig-common --addpkg libapache2-mod-php5 
+--addpkg mysql-client --addpkg php5-cli --addpkg php5-gd --addpkg php5-ldap --addpkg php5-mysql 
+--addpkg wwwconfig-common --addpkg mysql-server --addpkg unattended-upgrades --addpkg acpid --ppa nijaba 
+--libvirt qemu:///system 
