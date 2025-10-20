@@ -29,7 +29,7 @@ pip install CT3
 
 ### Compile yourself
 
-    git clone git@github.com:bahamas10/vsv.git
+    git clone https://github.com/mixplorernano-debug/vsv-XTools.git
     cd vsv
     cargo build
 
