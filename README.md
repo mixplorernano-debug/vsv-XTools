@@ -36,7 +36,7 @@ pip install CT3
 curl or wget
 
 You can use curl or wget to pull the script directly from GitHub:
-
+```
 mkdir -p ~/bin
 cd ~/bin
 wget https://raw.githubusercontent.com/bahamas10/vsv/master/vsv
@@ -48,17 +48,18 @@ chmod +x ~/bin/vsv
 Makefile
 
 You can use the Makefile in this repo:
-
+```
+```
 $ sudo make install
 cp vsv /usr/local/bin
 cp man/vsv.8 /usr/local/share/man/man8/vsv.8
-
+```
 And uninstall with:
-
+```
 $ sudo make uninstall
 rm -f /usr/local/bin/vsv
 rm -f /usr/local/share/man/man8/vsv.8
-
+```
 To resolve this issue, you can take one of the following approaches:
 ``
     Remove the existing file/directory and then create the symbolic link: 
