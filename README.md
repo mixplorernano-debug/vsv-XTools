@@ -44,11 +44,11 @@ wget https://raw.githubusercontent.com/bahamas10/vsv/master/vsv
 curl -O https://raw.githubusercontent.com/bahamas10/vsv/master/vsv
 # and then
 chmod +x ~/bin/vsv
-
+```
 Makefile
 
 You can use the Makefile in this repo:
-```
+
 ```
 $ sudo make install
 cp vsv /usr/local/bin
